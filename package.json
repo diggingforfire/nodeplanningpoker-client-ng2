@@ -9,7 +9,7 @@
 		"serve": "lite-server -c=bs-config.json",
 		"prestart": "npm run build",
 		"start": "concurrently \"npm run build:watch\" \"npm run serve\"",
-		"lint": "tslint ./src/**/*.ts -t verbose"
+		"lint": "tslint -c tslint.json ./src/**/*.ts"
 	},
 	"author": "diggingforfire",
 	"license": "MIT",
