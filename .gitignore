@@ -38,3 +38,7 @@ jspm_packages
 
 # Visual Studio Code related files
 .vscode
+
+# TypeScript output files
+src/**/*.js
+src/**/*.map
