@@ -9,7 +9,8 @@
 		"serve": "lite-server -c=bs-config.json",
 		"prestart": "npm run build",
 		"start": "concurrently \"npm run build:watch\" \"npm run serve\"",
-		"lint": "tslint -c tslint.json ./src/**/*.ts"
+		"lint": "tslint -c tslint.json ./src/**/*.ts",
+		"lint:watch": "chokidar src/**/*.ts -c \"npm run lint\" --initial --verbose "
 	},
 	"author": "diggingforfire",
 	"license": "MIT",
@@ -37,6 +38,7 @@
 		"@types/jasmine": "2.5.36",
 		"@types/node": "^6.0.45",
 		"canonical-path": "0.0.2",
+		"chokidar": "^1.6.1",
 		"concurrently": "^3.0.0",
 		"jasmine": "~2.4.1",
 		"jasmine-core": "~2.4.1",
