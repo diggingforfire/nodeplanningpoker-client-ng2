@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
 	selector: 'app',
-	template: `<h1>Node Planning Poker</h1>`
+	templateUrl: './app/app.component.html'
 })
 
 export class AppComponent { }
