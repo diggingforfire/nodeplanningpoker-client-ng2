@@ -40,5 +40,6 @@ jspm_packages
 .vscode
 
 # TypeScript output files
-src/**/*.js
+src/app/**/*.js
+src/main.js
 src/**/*.map
