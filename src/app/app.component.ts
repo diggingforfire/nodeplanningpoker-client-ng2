@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LobbyComponent } from './lobby/lobby.component'
+import { LobbyComponent } from './lobby/lobby.component';
 
 @Component({
 	selector: 'app',
