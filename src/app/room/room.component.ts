@@ -23,12 +23,12 @@ export class RoomComponent implements OnInit {
 	}
 
 	private updateRoom(roomState: any) {
-		// if (roomState) {
-		// 	this.players = this.players.slice();
+		if (roomState) {
+			this.players = [];
 
-		// 	Object.keys(roomState.players).forEach(key => {
-		// 		this.players.push(roomState.players[key]);
-		// 	});
-		// }
+			Object.keys(roomState.players).forEach(key => {
+				this.players.push(roomState.players[key]);
+			});
+		}
 	}
 }
