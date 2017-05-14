@@ -26,9 +26,6 @@
 			},
 			rxjs: {
 				defaultExtension: 'js'
-			},
-			'ng2-cookies': {
-				defaultExtension: 'js'
 			}
 		}
 	});
