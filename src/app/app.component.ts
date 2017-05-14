@@ -8,13 +8,7 @@ import { LobbyComponent } from './lobby/lobby.component';
 
 export class AppComponent {
 
-	private test() {
-		let x = 5;
-		let y = 10;
-
-		[x, y] = [y, x];
-
-
-		return x;
+	public navigateToNode() {
+		window.location.href = 'https://nodejs.org';
 	}
 }

@@ -3,12 +3,29 @@ $global-emphasis-color: white;
 @import "../node_modules/uikit/src/scss/variables-theme.scss";
 @import "../node_modules/uikit/src/scss/mixins-theme.scss";
 @import "../node_modules/uikit/src/scss/uikit-theme.scss";
+@import "../node_modules/octicons/build/octicons.min.css";
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
 
 $xs: 320px;
 $sm: 544px;
 $md: 768px;
 $lg: 992px;
 $xlg: 1280px;
+
+@font-face {
+    font-family: 'gubblebumblacknblocky';
+    src: url('gubblablo-webfont.woff2') format('woff2'),
+         url('gubblablo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 html {
 	height: 100%;
@@ -28,28 +45,27 @@ html {
 		flex: 0 0 auto;
 		padding: 0.75rem;
 		display: flex;
+		justify-content: center;
 
 		h1 {
-			margin-top: 0.75rem;
-
+			margin: 0;
+			font-family: 'gubblebumblacknblocky';
 
 			@media screen and (max-width : $xs) {
-				font-size: 1.5rem;
+				font-size: 1.75rem;
 			}
 
 			@media screen and(min-width : $xs + 1) and (max-width : $sm) {
 				font-size: 2rem;
 			}
 		}
-
-		@media screen and (max-width : $md) {
-			justify-content: center;
-		}
+		
 	}
 
 	.content {
 		background: #edf2f7;
 		border-top: 1px solid #d5d9de;
+		border-bottom: 1px solid #d5d9de;
 		flex: 1 1 100%;
 		display: flex;
 		justify-content: center;
@@ -65,6 +81,43 @@ html {
 
 			.join {
 				justify-content: center;
+			}
+
+			@include placeholder {
+				color: #bbb !important; // important needed for IE11
+			}
+		}
+	}
+
+	.footer {
+		background-color: #e6e6e6;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.github {
+
+			width: 2rem;
+			height: 2rem;
+			margin: 1rem;
+		}
+
+		.forkme {
+			margin-right: 1rem;
+		}
+
+		.version {
+			align-self: flex-end;
+			margin-left: auto;
+		}
+
+		.nodejs {
+			margin-left: 1rem;
+			width: 5rem;
+			height: 5rem;
+
+			&:hover {
+				cursor: pointer;
 			}
 		}
 	}

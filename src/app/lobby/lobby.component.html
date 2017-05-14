@@ -1,9 +1,13 @@
 <div class="uk-margin-small-bottom">
-	<input class="uk-input" placeholder="Your name">
+	<input class="uk-input" [(ngModel)]="playerName"  placeholder="Your name">
 </div>
 
 <div class="uk-margin-small-bottom">
-	<input class="uk-input" placeholder="Room name">
+	<input class="uk-input" [(ngModel)]="roomName"  placeholder="Room name">
 </div>
 
-<button class="uk-button uk-button-primary join">JOIN</button>
+<div class="uk-margin-small-bottom">
+	<input class="uk-input" placeholder="Password (optional)">
+</div>
+
+<button (click)="joinRoom()" class="uk-button uk-button-primary join">JOIN</button>
