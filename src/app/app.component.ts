@@ -7,8 +7,5 @@ import { LobbyComponent } from './lobby/lobby.component';
 })
 
 export class AppComponent {
-
-	public navigateToNode() {
-		window.location.href = 'https://nodejs.org';
-	}
+	public pageTitle: string = 'Node Planning Poker';
 }
