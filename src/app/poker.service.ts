@@ -14,11 +14,8 @@ export class PokerService {
 		this.socket = io(this.endPoint);
 	}
 
-	public addRoomUpdateListener(listener: any) {
+	public joinRoom(roomName: string, playerName: string, listener: any): void {
 		this.socket.on('updateRoom', listener);
-	}
-
-	public joinRoom(playerName: string, roomName: string): void {
 		this.socket.emit('joinRoom', roomName, playerName);
 	}
 

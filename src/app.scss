@@ -71,19 +71,21 @@ html {
 		align-items: center;
 
 		.lobby {
-			padding: 1.25rem;
-			margin-bottom: 1.5rem;
 			flex: 0 1 500px;
-			max-width: 500px;
-			display: flex;
-			flex-direction: column;
 
-			.join {
-				justify-content: center;
-			}
+			.lobby-container {
+				padding: 1.25rem;
+				margin-bottom: 1.5rem;
+				display: flex;
+				flex-direction: column;
 
-			@include placeholder {
-				color: #bbb !important; // important needed for IE11
+				.join {
+					justify-content: center;
+				}
+
+				@include placeholder {
+					color: #bbb !important; // important needed for IE11
+				}
 			}
 		}
 	}

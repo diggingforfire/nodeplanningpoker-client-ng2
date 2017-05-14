@@ -1,13 +1,17 @@
-<div class="uk-margin-small-bottom">
-	<input class="uk-input" [(ngModel)]="playerName"  placeholder="Your name">
+<div class="lobby-container" [hidden]="isHidden()">
+	<div class="uk-margin-small-bottom">
+		<input class="uk-input" [(ngModel)]="playerName"  placeholder="Your name">
+	</div>
+
+	<div class="uk-margin-small-bottom">
+		<input class="uk-input" [(ngModel)]="roomName"  placeholder="Room name">
+	</div>
+
+	<!--<div class="uk-margin-small-bottom">
+		<input class="uk-input" placeholder="Password (optional)">
+	</div>-->
+
+	<button (click)="joinRoom()" class="uk-button uk-button-primary join">JOIN</button>
 </div>
 
-<div class="uk-margin-small-bottom">
-	<input class="uk-input" [(ngModel)]="roomName"  placeholder="Room name">
-</div>
-
-<div class="uk-margin-small-bottom">
-	<input class="uk-input" placeholder="Password (optional)">
-</div>
-
-<button (click)="joinRoom()" class="uk-button uk-button-primary join">JOIN</button>
+<router-outlet></router-outlet>
