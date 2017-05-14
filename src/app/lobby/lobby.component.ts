@@ -23,12 +23,10 @@ export class LobbyComponent {
 		Cookie.set('roomName', this.roomName, 30);
 		Cookie.set('playerName', this.playerName, 30);
 
-		this.router.navigate(['/room', this.roomName, 'player', this.playerName]).then( () => {
-
-		});
+		this.router.navigate(['/room', this.roomName, 'player', this.playerName]);
 	}
 
-	public isHidden() : boolean {
+	public isHidden(): boolean {
 		return this.location.path() !== '';
 	}
 }
