@@ -30,4 +30,8 @@ export class PokerService {
 	public toggleCards() {
 		this.socket.emit('toggleCards');
 	}
+
+	public leaveRoom() {
+		this.socket.emit('leaveRoom');
+	}
 }

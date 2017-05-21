@@ -1,4 +1,4 @@
-import { Component, OnInit, Optional } from '@angular/core';
+import { Component, OnInit, OnDestroy, Optional } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PokerService } from '../shared/poker.service';
 
@@ -7,7 +7,7 @@ import { PokerService } from '../shared/poker.service';
 	templateUrl: './app/room/room.component.html'
 })
 
-export class RoomComponent implements OnInit {
+export class RoomComponent implements OnInit, OnDestroy {
 	public players: any[] = [];
 
 	constructor(private pokerService: PokerService, private route: ActivatedRoute) {
@@ -21,6 +21,10 @@ export class RoomComponent implements OnInit {
 		this.pokerService.joinRoom(roomName, playerName, (roomState: any) => {
 			this.updateRoom(roomState);
 		});
+	}
+
+	public ngOnDestroy() {
+		this.pokerService.leaveRoom();
 	}
 
 	private updateRoom(roomState: any) {
