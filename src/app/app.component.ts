@@ -9,5 +9,5 @@ import { PokerService } from './shared/poker.service';
 })
 
 export class AppComponent {
-	public pageTitle: string = 'Node Planning Poker';
+
 }

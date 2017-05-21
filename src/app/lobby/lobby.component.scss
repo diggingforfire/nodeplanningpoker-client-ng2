@@ -1,0 +1,23 @@
+lobby {
+	display: flex;
+	justify-content: center;
+	flex: 1 1 auto;
+	
+	.container {
+		display: flex;
+		flex: 1 1 100%;
+		justify-content: center;
+
+		.content {
+			display: flex;
+			flex: 0 1 500px;
+			flex-direction: column;
+			justify-content: center;
+			padding: 1.25rem;
+
+			@include placeholder {
+				color: #bbb !important; // important needed for IE11
+			}
+		}
+	}
+}

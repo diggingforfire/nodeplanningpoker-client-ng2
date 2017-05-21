@@ -12,7 +12,6 @@ export class LobbyComponent {
 
 	public roomName: string;
 	public playerName: string;
-	public password: string;
 
 	constructor(private router: Router, private location: Location) {
 		this.roomName = Cookie.get('roomName');

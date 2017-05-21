@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { PokerService } from '../shared/poker.service';
 
 @Component({
+	selector: 'room',
 	templateUrl: './app/room/room.component.html'
 })
 
