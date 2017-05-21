@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { LobbyComponent } from './lobby/lobby.component';
-import { PokerService } from './poker.service';
+import { PokerService } from './shared/poker.service';
 
 @Component({
 	selector: 'app',

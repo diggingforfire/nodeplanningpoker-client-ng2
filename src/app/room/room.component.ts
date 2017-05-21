@@ -1,6 +1,6 @@
 import { Component, OnInit, Optional } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PokerService } from '../poker.service';
+import { PokerService } from '../shared/poker.service';
 
 @Component({
 	templateUrl: './app/room/room.component.html'
