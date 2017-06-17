@@ -5,8 +5,11 @@ room {
 	flex-direction: column;
 	margin-top: 90px;
 
-	h1 {
-		color: black;
+	h2 {
+		color: gray;
+		margin-top: 10px;
+		font-family: 'gubblebumblacknblocky';
+		font-style: italic;
 	}
 
 	& > .content {
@@ -16,7 +19,6 @@ room {
 		flex-direction: row;
 		justify-content: center;
 		flex-wrap: wrap;
-		margin-top: 20px;
 
 		@include placeholder {
 			color: #bbb !important; // important needed for IE11

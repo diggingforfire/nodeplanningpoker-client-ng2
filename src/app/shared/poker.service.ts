@@ -3,7 +3,7 @@ import * as io from 'socket.io-client'
 
 @Injectable()
 export class PokerService {
-	private endPoint: string = 'http://localhost:5050';
+	private endPoint: string = 'http://192.168.178.23:5050';
 	private socket: SocketIOClient.Socket;
 
 	constructor() {

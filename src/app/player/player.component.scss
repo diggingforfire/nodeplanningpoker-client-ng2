@@ -2,8 +2,11 @@ player {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid black;
+	border: 1px solid gray;
 	margin: 10px 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 
 	@media screen and (max-width : $xs) {
 		flex: 1 1 125px;
