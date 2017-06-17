@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LobbyComponent } from './lobby/lobby.component';
 import { RoomComponent } from './room/room.component';
+import { PlayerComponent } from './player/player.component';
 
 @NgModule(
 	{
@@ -12,7 +13,7 @@ import { RoomComponent } from './room/room.component';
 				{ path: 'room/:roomName/player/:playerName', component: RoomComponent }
 			]) 
 		],
-		declarations: [ AppComponent, LobbyComponent, RoomComponent ],
+		declarations: [ AppComponent, LobbyComponent, RoomComponent, PlayerComponent ],
 		bootstrap: [ AppComponent ]
 	}
 )

@@ -1,5 +1,8 @@
+<!--<h1>Room: {{roomName}}</h1>-->
+
 <div class="content">
-	<div class="player" *ngFor="let player of players">
-		{{player.name}}
-	</div>
+	<player 
+	*ngFor="let player of players" 
+	[name]="player.name" 
+	[currentEstimate]="2"></player>
 </div>

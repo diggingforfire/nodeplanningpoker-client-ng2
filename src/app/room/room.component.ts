@@ -9,16 +9,17 @@ import { PokerService } from '../shared/poker.service';
 
 export class RoomComponent implements OnInit, OnDestroy {
 	public players: any[] = [];
-
+	public roomName: string;
+	
 	constructor(private pokerService: PokerService, private route: ActivatedRoute) {
 
 	}
 
 	public ngOnInit() {
-		let roomName = this.route.snapshot.params['roomName'];
+		this.roomName = this.route.snapshot.params['roomName'];
 		let playerName = this.route.snapshot.params['playerName'];
 
-		this.pokerService.joinRoom(roomName, playerName, (roomState: any) => {
+		this.pokerService.joinRoom(this.roomName, playerName, (roomState: any) => {
 			this.updateRoom(roomState);
 		});
 	}
@@ -35,5 +36,7 @@ export class RoomComponent implements OnInit, OnDestroy {
 				this.players.push(roomState.players[key]);
 			});
 		}
+
+		console.log(this.players);
 	}
 }
