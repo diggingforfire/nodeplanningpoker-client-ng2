@@ -4,10 +4,33 @@ room {
 	align-items: center;
 	flex-direction: column;
 	margin-top: 90px;
+
 	.roomName {
 		color: gray;
 		margin-top: 10px;
 		font-style: italic;
+	}
+
+	.toolbar {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		margin-top: -10px;
+		margin-bottom: 10px;
+
+		i {
+			margin: 1rem;
+			flex: 1 1 100%;
+			font-size: 30px;
+
+			&.show-cards {
+				text-align: right;
+			}
+
+			&.reset-cards {
+
+			}
+		}
 	}
 
 	& > .content {
