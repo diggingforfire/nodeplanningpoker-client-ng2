@@ -9,4 +9,6 @@ export class PlayerComponent {
 
 	@Input() public name: string;
 	@Input() public currentEstimate: string = '0';
+	@Input() public isYou: boolean;
+	public id: string;
 }

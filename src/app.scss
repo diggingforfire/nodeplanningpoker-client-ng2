@@ -42,6 +42,10 @@ html {
 	min-height: 100%;
 }
 
+h1, h2, h3 {
+	font-family: 'gubblebumblacknblocky';
+}
+
 .header {
 	background: #4b9ae8;
 	border-bottom: 1px solid #d5d9de;
@@ -54,8 +58,6 @@ html {
 	top: 0;
 
 	h1 {
-		font-family: 'gubblebumblacknblocky';
-
 		@media screen and (max-width : $xs) {
 			font-size: 1.75rem;
 		}

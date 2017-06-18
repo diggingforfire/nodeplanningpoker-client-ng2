@@ -10,7 +10,8 @@ import { PokerService } from '../shared/poker.service';
 export class RoomComponent implements OnInit, OnDestroy {
 	public players: any[] = [];
 	public roomName: string;
-	
+	private playerId: string;
+
 	constructor(private pokerService: PokerService, private route: ActivatedRoute) {
 
 	}
@@ -31,9 +32,14 @@ export class RoomComponent implements OnInit, OnDestroy {
 	private updateRoom(roomState: any) {
 		if (roomState) {
 			this.players = [];
+			var currentPlayerId = this.pokerService.getPlayerId();
 
 			Object.keys(roomState.players).forEach(key => {
-				this.players.push(roomState.players[key]);
+				let player = roomState.players[key];
+				player.isYou = player.id === currentPlayerId;
+				this.players.push(player);
+
+
 			});
 		}
 

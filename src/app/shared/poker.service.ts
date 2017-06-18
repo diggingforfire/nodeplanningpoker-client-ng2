@@ -34,4 +34,8 @@ export class PokerService {
 	public leaveRoom() {
 		this.socket.emit('leaveRoom');
 	}
+
+	public getPlayerId() {
+		return this.socket.id;
+	}
 }
